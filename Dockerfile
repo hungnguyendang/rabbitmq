@@ -79,4 +79,4 @@ RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 4369 5671 5672 25672 15672 8080
-CMD -p 5672:5672 ["rabbitmq-server"]
+CMD -p 15672:15672 -p 5672:5672 ["rabbitmq-server"]
